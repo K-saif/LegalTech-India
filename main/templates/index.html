@@ -1,0 +1,613 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>LegalTech India</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Variables CSS File. -->
+  <link href="{% static 'assets/css/variables.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/fe4126aa-c188-43a9-8f56-3383867ae7f2/webchat/config.js" defer></script>
+<body>
+
+  {% include 'header.html' %} 
+
+  
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Do you have any Startup Idea ?</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Get complete business solution at one place</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a class="btn-getstarted scrollto" href="#corn">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'assets/img/hero-img.svg' %}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="clients-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-buildings icon"></i></div>
+                    <h4><a href="{% url 'business_registration' slug='plc'  %}" class="stretched-link">Company Registration</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-r-circle icon"></i></div>
+                    <h4><a href="{% url 'intellectual_property' slug='tmreg'  %}" class="stretched-link">Trademark Registration</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-clipboard2-check icon"></i></div>
+                    <h4><a href="{% url 'gst_incometax' slug='gstreg'  %}" class="stretched-link">GST Regsitration</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide" >
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-cup-hot icon"></i></div>
+                    <h4><a href="{% url 'registration_licencing' slug='flic'  %}" class="stretched-link">Food License</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-airplane-engines icon"></i></div>
+                    <h4><a href="{% url 'registration_licencing' slug='iec'  %}" class="stretched-link">Import Export Code</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-shield-check"></i></div>
+                    <h4><a href="{% url 'registration_licencing' slug='bis'  %}" class="stretched-link">BIS License </a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+              <div class="swiper-slide">
+                <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+                  <div class="service-item position-relative">
+                    <div class="icon"><i class="bi bi-shop-window icon"></i></div>
+                    <h4><a href="{% url 'registration_licencing' slug='msme'  %}" class="stretched-link">MSME Registration</a></h4>
+                  </div>
+                </div><!-- End Service Item -->
+              </div>
+
+                <div class="swiper-slide">
+                  <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
+                    <div class="service-item position-relative">
+                      <div class="icon"><i class="bi bi-globe icon"></i></div>
+                      <h4><a href="{% url 'information_technology' slug='wd'  %}" class="stretched-link">Website Development</a></h4>
+                    </div>
+                  </div><!-- End Service Item -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+            <h3>LegalTech India<em></em> </h3>
+            <p style="text-align: justify;">Our vision for the Legal Tech India is to revolutionise the way legal services are delivered by leveraging cutting-edge technology. We aim to create a user-friendly platform that provides accessible and affordable legal solutions to individuals and businesses. 
+            </p>
+            <a class="cta-btn align-self-start scrollto" href="#contact_form">Contact Now</a>
+          </div>
+
+          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+            <div class="img">
+              <img src="{% static 'assets/img/cta.jpg' %}" alt="" class="img-fluid">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= On Focus Section ======= -->
+    <section id="onfocus" class="onfocus">
+      <div class="container-fluid p-0" data-aos="fade-up">
+
+        <div class="row g-0">
+          <div class="col-lg-6 video-play position-relative">
+            <a href="https://youtube.com/shorts/WJltwb4JSZM" class="glightbox play-btn"></a>
+          </div>
+          <div class="col-lg-6">
+            <div class="content d-flex flex-column justify-content-center h-100">
+              <h3>LegalTech India</h3>
+              <p class="fst-italic">
+                We help businesses and entrepreneurs to run and set up their businesses by providing streamlined, cost-effective, and accessible legal, compliance services. 
+
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Cloud-based document management system for storing and organizing legal documents.</li>
+                <li><i class="bi bi-check-circle"></i> Easy-to-use interface for individuals with limited legal knowledge to find and understand legal information.</li>
+                <li><i class="bi bi-check-circle"></i> Tax planning and filing services to help businesses manage their tax obligations and minimise their tax liability.</li>
+                <li><i class="bi bi-check-circle"></i> Legal consulting services to help businesses navigate legal issues and make informed decisions.</li>
+              </ul>
+              <a href="#" class="read-more align-self-start"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End On Focus Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>We offers a range of services to support businesses and individuals in their professional and personal pursuits. We strive to provide high-quality and efficient solutions to help our clients achieve their goals and reach success.</p>
+        </div>
+
+        <div class="row gy-5">
+          
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/services-1.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-rocket-takeoff"></i>
+                </div>
+                <a href="/business/" class="stretched-link">
+                  <h3>Business Startup Services</h3>
+                </a>
+                <p>Helping entrepreneurs launch and grow successful businesses.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/ser/12.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-clipboard2-check"></i>
+                </div>
+                <a href="/licencing/" class="stretched-link">
+                  <h3>Registration and License</h3>
+                </a>
+                <p>All type of complete regsitration & licensing to operate a business.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/services-3.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-receipt-cutoff"></i>
+                </div>
+                <a href="/taxation/" class="stretched-link">
+                  <h3>GST and <br> Income Tax</h3>
+                </a>
+                <p>Complete Taxation Service. Income Tax, TDS, GST, Professional Tax</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="700">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/services-6.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-lightbulb"></i>
+                </div>
+                <a href="/ipr/" class="stretched-link">
+                  <h3>IPR Service</h3>
+                </a>
+                <p>Protect your intellectual property. Trademark, Copyright, Patent.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/ser/10.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <a href="/it/" class="stretched-link">
+                  <h3>IT Services</h3>
+                </a>
+                <p> Get complete IT support for all kind of businesses and startups.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+            <div class="service-item">
+              <div class="img">
+                <img src="{% static 'assets/img/services-5.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-hurricane"></i>
+                </div>
+                <a href="graphic.html" class="stretched-link">
+                  <h3>Graphic Designing</h3>
+                </a>
+                <p>We create eye-catching visuals that resonate with their target audience.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container" data-aos="fade-up">
+
+        <ul class="nav nav-tabs row gy-4 d-flex">
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class="bi bi-rocket color-black"></i>
+              <h4>Top Emerging</h4>
+            </a>
+          </li><!-- End Tab 1 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class="bi bi-award color-green"></i>
+              <h4>Recognised</h4>
+            </a>
+          </li><!-- End Tab 2 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+              <i class="bi bi-person-plus color-orange"></i>
+              <h4>1000+ Clients</h4>
+            </a>
+          </li><!-- End Tab 3 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+              <i class="bi bi-lock color-red"></i>
+              <h4>Data Security</h4>
+            </a>
+          </li><!-- End Tab 4 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+              <i class="bi bi-people-fill color-blue"></i>
+              <h4>Expert Team</h4>
+            </a>
+          </li><!-- End Tab 5 Nav -->
+
+          <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+              <i class="bi bi-clipboard2-check color-green light"></i>
+              <h4>Affordable</h4>
+            </a>
+          </li><!-- End Tab 6 Nav -->
+
+        </ul>
+
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="testimonials-slider swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>ARI Enterprises Pvt. Ltd</h3>
+                <h4>Mumbai</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Super and prompt service with quick response time and detailed atttention, would highly recommend LegalTech India.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>Mr. Sudhir Sawant</h3>
+                <h4>Nashik, Maharashtra</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Problem Solving efficient continously in touch.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>Mr. Sajib Ghosh</h3>
+                <h4>Agartala, Tripura</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Fantastic & quality service provider additionally at comparatively lower pricing than the competition. using their service for compliance of my business. Surely opting LegalTech India is worthy.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>Mr. Fuaz Mithani</h3>
+                <h4>Mumbai</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Very professional and positive approach by LegalTech India.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>M/s Minima Tech</h3>
+                <h4>Thane, Maharashtra</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  I had an excellent experience at LegalTech, lawyers are knowledgeable professional provided me a clear concise guidance to resolving my issues.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>Dr. Subhash Khoja</h3>
+                <h4>Nagaur, Rajasthan</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Genuine service provider with utmost care, very professional experience.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{% static 'assets/img/testimonials/default.jpg' %}" class="testimonial-img" alt="">
+                <h3>Ameer Alam</h3>
+                <h4>Bhiwandi, Maharashtra</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  I am extremely satisfied with the professional service, Their expert team helped me to navigate complex legal and business challenges with ease. I highly recommend LegalTech India to anyone in need of top-notch professional services. Thank you for your exceptional work !
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->            
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Have any query or need help, kindly fill this form our experienced team is ready to assist you. We are committed to serving you with the highest level of professionalism, expertise, and personalized attention.</p>
+        </div>
+
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-5 gx-lg-5">
+
+          <div class="col-lg-4">
+
+            <div id="corn" class="info">
+              <h3>Get in touch</h3>
+              <p>Feel free to contact us using the information provided below we would love to hear from you.</p>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>Office No 03  <br>
+                    Baitul Ansar Height <br>
+                    Gaibi Nagar Bhiwandi<br>
+                    Thane Maharashtra 421302</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@legaltechindia.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+91 8485860542</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+
+          </div>
+            {% block content %}
+            <div id="contact_form" class="col-lg-8">
+              <div class="row">
+              <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="{{ form.name.id_for_label }}"></label>
+                  {{ form.name }}
+                </div>
+                <div class="form-group">
+                  <label for="{{ form.mobile.id_for_label }}"></label>
+                  {{ form.mobile }}
+                </div>
+                <div class="form-group">
+                  <label for="{{ form.email.id_for_label }}"></label>
+                  {{ form.email }}
+                </div>
+                <div class="form-group">
+                  <label for="{{ form.subject.id_for_label }}"></label>
+                  {{ form.subject }}
+                </div>
+                <div class="form-group">
+                  <label for="{{ form.message.id_for_label }}"></label>
+                  {{ form.message }}
+                </div>
+                <div class="text-center mt-3"><button type="submit" class="btn btn-primary">Send Massage</button></div>
+              </form>
+            {% endblock %}
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'footer.html' %} 
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

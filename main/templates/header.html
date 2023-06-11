@@ -1,0 +1,129 @@
+{% load static %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top" data-scrollto-offset="0">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+
+    <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+      <img src="{% static 'assets/img/logo.svg' %}" alt="">
+    </a>
+
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="/"><span>Home</span></a></li>
+
+        <li class="dropdown megamenu">
+          <a href="/business/"><span>Business Registration</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'business_registration' slug='plc'  %}">Private Limited Company</a>
+              <a href="{% url 'business_registration' slug='opc'  %}">One Person Company</a>
+              <a href="{% url 'business_registration' slug='part'  %}">Partnership Registration</a>
+            </li>
+            <li>
+              <a href="{% url 'business_registration' slug='prop'  %}">Proprietorship</a>
+              <a href="{% url 'business_registration' slug='llp'  %}">LLP Registration</a>
+              <a href="{% url 'business_registration' slug='sreg'  %}">Society Registration</a>
+            </li>
+            <li>
+              <a href="{% url 'business_registration' slug='epf'  %}">Employee Provident Fund</a>
+              <a href="{% url 'business_registration' slug='esi'  %}">Employee State Insurance</a>
+              <a href="{% url 'business_registration' slug='ngo'  %}">NGO Registration</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown megamenu">
+          <a href="/licencing"><span>Licensing</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'registration_licencing' slug='flic'  %}">Food License</a>
+              <a href="{% url 'registration_licencing' slug='msme'  %}">MSME Udyam Registration</a>
+              <a href="{% url 'registration_licencing' slug='bis'  %}">BIS License</a>
+            </li>
+            <li>
+              <a href="{% url 'registration_licencing' slug='iso'  %}">ISO Certification</a>
+              <a href="{% url 'registration_licencing' slug='sel'  %}">Shop & Establishment License</a>
+              <a href="{% url 'registration_licencing' slug='llic'  %}">Labour License</a>
+            </li>
+            <li>
+              <a href="{% url 'registration_licencing' slug='sir'  %}">Startup India Registration</a>
+              <a href="{% url 'registration_licencing' slug='dsc'  %}">Digital Signature Certificate (DSC)</a>
+              <a href="{% url 'registration_licencing' slug='psa'  %}">Private Security Agency (PSARA)</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown megamenu">
+          <a href="/taxation"><span>Taxation</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'gst_incometax' slug='gstreg'  %}">GST Registration</a>
+              <a href="{% url 'gst_incometax' slug='gstr'  %}">GST Returns</a>
+            </li>
+            <li>
+              <a href="{% url 'gst_incometax' slug='tds'  %}">TDS</a>
+              <a href="{% url 'gst_incometax' slug='pt'  %}">Professional Tax</a>
+            </li>
+            <li>
+              <a href="{% url 'gst_incometax' slug='itr'  %}">Income Tax Return</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown megamenu">
+          <a href="/ipr"><span>Intellectual Property</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'intellectual_property' slug='tmreg'  %}">Trademark Registration</a>
+              <a href="{% url 'intellectual_property' slug='tmr'  %}">Trademark Renewal</a>
+              <a href="{% url 'intellectual_property' slug='tmo'  %}">Trademark Opposition</a>
+            </li>
+            <li>
+              <a href="{% url 'intellectual_property' slug='cr'  %}">Copyright Registration</a>
+              <a href="{% url 'intellectual_property' slug='dr'  %}">Design Registration</a>
+            </li>
+            <li>
+              <a href="{% url 'intellectual_property' slug='prp'  %}">Permanent Patent</a>
+              <a href="{% url 'intellectual_property' slug='prop'  %}">Provisional Patent</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown megamenu">
+          <a href="/it"><span>IT</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'information_technology' slug='wd'  %}">Website Development</a>
+              <a href="{% url 'information_technology' slug='mad'  %}">Mobile App Development</a>
+            </li>
+            <li>
+              <a href="{% url 'information_technology' slug='gd'  %}">Graphic Designing</a>
+              <a href="{% url 'information_technology' slug='dm'  %}">Digital Marketing</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown megamenu">
+          <a href="#"><span>Other</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <ul>
+            <li>
+              <a href="{% url 'other_service' slug='ln'  %}">Legal Notice</a>
+              <a href="{% url 'other_service' slug='lla'  %}">Leave & License Agreement</a>
+              <a href="{% url 'other_service' slug='lsa'  %}">Lease Agreement</a>
+            </li>
+            <li>
+              <a href="{% url 'other_service' slug='sd'  %}">Sale Deed</a>
+              <a href="{% url 'other_service' slug='gd'  %}">Gift Deed</a>
+              <a href="{% url 'other_service' slug='poa'  %}">Power of Attorney</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle d-none"></i>
+    </nav><!-- .navbar -->
+    <a class="btn-getstarted scrollto" href="index.html#about"></a>
+  </div>
+</header><!-- End Header -->

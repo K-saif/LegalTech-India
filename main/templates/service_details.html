@@ -1,0 +1,235 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Variables CSS File. -->
+  <link href="{% static 'assets/css/variables.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  {% include 'header.html' %} 
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ service.name }}</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            {% url 'business' as service.main_service_link %}
+            <li><a href="{{service.main_service_link}}">{{ service.main_service }}</a></li>
+            <li>{{ service.name }}</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-12">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+              {% if service.image %}
+                <img src="{{ service.image.url }}" alt="{{ service.name }}" class="img-fluid">
+             {% endif %}               
+              </div>
+              <h2 class="title">{{ service.name }}</h2>
+
+              <div class="content">
+                <p>
+                  {{ service.description1 }}
+                </p>
+
+                <blockquote>
+                  <p>
+                    {{ service.quote }}
+                  </p>
+                </blockquote>
+
+                <h3>
+                  {{ service.sec_name }}
+                </h3>
+                <p>
+                  {{ service.description2 }}
+                </p>
+                <h3>
+                  {{ service.third_name }}
+                </h3>
+                <p>
+                  {{ service.description3 }}
+                </p>
+
+                <h3>
+                  {{ service.doc_title }}
+                </h3>
+                {% for document in service.documents.all %}
+                <h5 >{{ document.doc_name }}</h5>
+                {% endfor %}
+                <h3>
+                  {{ service.con_title }}
+                </h3>
+                <p>
+                    {{ service.conclusion }}
+                </p>
+          
+
+          </div>
+        </div>
+
+      </div>
+
+      
+    </section><!-- End Blog Details Section -->
+<!-- ======= F.A.Q Section ======= -->
+<section id="faq" class="faq">
+  <div class="container-fluid px-xl-5" data-aos="fade-up">
+
+    <div class="row gy-4 px-xl-5">
+
+      <div class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+        <div class="content px-xl-5">
+          <h3>Frequently Asked <strong>Questions</strong></h3>
+        </div>
+
+        <div class="accordion accordion-flush px-xl-5" id="faqlist">
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                <i class="bi bi-question-circle question-icon"></i>
+                {{ service.question1 }}
+              </button>
+            </h3>
+            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+              <div class="accordion-body">
+                 {{ service.answer1 }}
+              </div>
+            </div>
+          </div><!-- # Faq item-->
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                <i class="bi bi-question-circle question-icon"></i>
+                {{ service.question2 }}
+              </button>
+            </h3>
+            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+              <div class="accordion-body">
+                 {{ service.answer2 }}
+              </div>
+            </div>
+          </div><!-- # Faq item-->
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                <i class="bi bi-question-circle question-icon"></i>
+                {{ service.question3 }}
+              </button>
+            </h3>
+            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+              <div class="accordion-body">
+                 {{ service.answer3 }}
+              </div>
+            </div>
+          </div><!-- # Faq item-->
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                <i class="bi bi-question-circle question-icon"></i>
+                {{ service.question4 }}
+              </button>
+            </h3>
+            <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+              <div class="accordion-body">
+                 {{ service.answer4 }}
+              </div>
+            </div>
+          </div><!-- # Faq item-->
+
+          <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
+                <i class="bi bi-question-circle question-icon"></i>
+                {{ service.question5 }}
+              </button>
+            </h3>
+            <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+              <div class="accordion-body">
+                 {{ service.answer5 }}
+              </div>
+            </div>
+          </div><!-- # Faq item-->
+
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section><!-- End F.A.Q Section -->
+    
+
+    {% include 'footer.html' %} 
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

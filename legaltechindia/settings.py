@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://legaltechindia.in'
+    'https://web-production-1e81.up.railway.app'
 ]
 
 
